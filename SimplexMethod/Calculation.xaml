@@ -1,0 +1,31 @@
+﻿<Window x:Class="SimplexMethod.Calculation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimplexMethod"
+        mc:Ignorable="d"
+        Title="Calculation" Height="409.004" Width="669.386">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="out" HorizontalAlignment="Left" Margin="47,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="315" Width="566" TextAlignment="Center" FontSize="16"/>
+        <Button x:Name="next" Content="Далее" HorizontalAlignment="Left" Margin="344,341,0,0" VerticalAlignment="Top" Width="75" Click="Next_Click"/>
+        <UniformGrid Name="grid" HorizontalAlignment="Left" Height="317" Margin="22,21,0,0" VerticalAlignment="Top" Width="618"/>
+        <Button x:Name="prev" Content="Назад" HorizontalAlignment="Left" Margin="237,341,0,0" VerticalAlignment="Top" Width="75" Click="Prev_Click"/>
+        <Label x:Name="sup" Content="" HorizontalAlignment="Left" Margin="22,335,0,0" VerticalAlignment="Top" Width="203"/>
+        <Label x:Name="op" Content="" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,328,0,0" VerticalAlignment="Top" Width="215" Height="33" FontSize="18"/>
+        <Image x:Name="img2" Margin="613,55,27,42" Source="Безымянный2.jpg" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="img1" Margin="24,55,616,43" Source="Безымянный2.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="SimplexMethod.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimplexMethod"
+        mc:Ignorable="d"
+        Title="Simplex Method" Height="493" Width="832">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="331*"/>
+            <ColumnDefinition Width="493*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Количество переменных:" HorizontalAlignment="Left" Margin="29,28,0,0" VerticalAlignment="Top" Height="27" Width="154"/>
+        <Label Content="Количество ограничений:" HorizontalAlignment="Left" Margin="29,60,0,0" VerticalAlignment="Top" Height="28" Width="158"/>
+        <TextBox x:Name="lim" HorizontalAlignment="Left" Height="24" Margin="187,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36"/>
+        <TextBox x:Name="var" HorizontalAlignment="Left" Height="24" Margin="187,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36"/>
+        <Button Content="Применить" HorizontalAlignment="Left" Margin="247,48,0,0" VerticalAlignment="Top" Width="78" Click="CreateMatr_Click" Height="21"/>
+        <UniformGrid x:Name="matr" HorizontalAlignment="Left" Height="265" Margin="118,153,0,0" VerticalAlignment="Top" Width="590" Rows="17" Columns="17" Grid.ColumnSpan="2"/>
+        <UniformGrid x:Name="func" HorizontalAlignment="Left" Height="50" Margin="118,93,0,0" VerticalAlignment="Top" Width="590" Rows="2" Columns="17" Grid.ColumnSpan="2"/>
+        <Label Content="Целевая функция:" HorizontalAlignment="Left" Margin="40,69,0,0" VerticalAlignment="Top" Grid.Column="1" Height="27" Width="113"/>
+        <Label Content="Ограничения:" HorizontalAlignment="Left" Margin="54,141,0,0" VerticalAlignment="Top" Grid.Column="1" Height="27" Width="89"/>
+        <Button Name="cal" Content="Вычислить" HorizontalAlignment="Left" Margin="44,428,0,0" VerticalAlignment="Top" Width="78" Click="SimplexRun_Click" Height="21" Grid.Column="1" IsEnabled="False"/>
+        <CheckBox x:Name="auto" Content="Автоматически" HorizontalAlignment="Left" Margin="140,437,0,0" VerticalAlignment="Top" Height="16" Width="135" Grid.Column="1"/>
+        <Menu Height="25" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <MenuItem Header="Файл" Height="25" Width="48">
+                <MenuItem Header="Open Project" Click="OpenFile_Click" ></MenuItem>
+                <MenuItem Header="Save Project" Click="SaveFile_Click" ></MenuItem>
+                <Separator />
+                <MenuItem Header="Exit" Click="Exit_Click" ></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Справка" Click="About_Click" Width="58" ></MenuItem>
+        </Menu>
+        <CheckBox x:Name="fract" Content="Использовать дроби" HorizontalAlignment="Left" Margin="140,418,0,0" VerticalAlignment="Top" Height="16" Width="135" Grid.Column="1"/>
+        <CheckBox x:Name="start" Content="Базисные переменные" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="list" HorizontalAlignment="Left" Height="286" Margin="10,115,0,0" VerticalAlignment="Top" Width="100" SelectionMode="Multiple" />
+    </Grid>
+</Window>
