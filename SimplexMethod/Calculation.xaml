@@ -16,8 +16,8 @@
         <Button x:Name="prev" Content="Назад" HorizontalAlignment="Left" Margin="237,341,0,0" VerticalAlignment="Top" Width="75" Click="Prev_Click"/>
         <Label x:Name="sup" Content="" HorizontalAlignment="Left" Margin="22,335,0,0" VerticalAlignment="Top" Width="203"/>
         <Label x:Name="op" Content="" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,328,0,0" VerticalAlignment="Top" Width="215" Height="33" FontSize="18"/>
-        <Image x:Name="img2" Margin="613,55,27,42" Source="Безымянный2.jpg" Stretch="Fill" Visibility="Hidden"/>
-        <Image x:Name="img1" Margin="24,55,616,43" Source="Безымянный2.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+        <Image x:Name="img2" Margin="613,55,27,42" Source="pic.jpg" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="img1" Margin="24,55,616,43" Source="pic.jpg" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
